@@ -1,0 +1,130 @@
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0 80px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+}
+.card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+.imageWrapper {
+  position: relative;
+}
+.image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.card:hover .image,
+.card:focus-within .image {
+  transform: scale(1.02);
+}
+.favorite {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  min-height: 48px;
+  transition: color 0.2s;
+}
+.content {
+  padding: 20px;
+}
+.content h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+}
+.content p {
+  margin: 0 0 12px 0;
+  color: #bbbbbb;
+  font-size: 1rem;
+}
+.detailBtn {
+  background: #00bcd4;
+  color: #121212;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 48px;
+  transition: background 0.2s;
+}
+.detailBtn:hover,
+.detailBtn:focus {
+  background: #0097a7;
+}
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .main {
+    padding: 16px 0 80px 0;
+  }
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 18, 18, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal {
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90vw;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
+}
+.modalImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.closeBtn {
+  background: #00bcd4;
+  color: #121212;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 16px;
+  min-height: 48px;
+}
+.closeBtn:hover,
+.closeBtn:focus {
+  background: #0097a7;
+}

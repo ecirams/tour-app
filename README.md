@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Top Tourist Places in USA
+
+## Setup
+```bash
+npm install
+npm start
+```
+
+## Usage
+- Browse top 10 US tourist destinations.
+- Mark favorites with the heart icon.
+- Click "Details" for more info.
+
+## Accessibility
+- Keyboard navigation and ARIA labels included.
+
+## Deployment
+- Build: `npm run build`
+- Deploy to Vercel/Netlify.
+
+## Contributing
+- Fork, clone, and submit PRs.
